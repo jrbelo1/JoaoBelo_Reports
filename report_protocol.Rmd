@@ -1,0 +1,89 @@
+---
+title: "Report: Experimental design and repdroducibility in Science"
+output:
+  word_document: default
+  html_notebook: default
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+```{r}
+
+```
+
+
+
+1- Question: 
+
+*How does shellfishing activity affect macrobenthos community and shorebirds on a major wetland on the East Atlantic Flyway?*
+
+
+
+2- Background: 
+
+The Tagus estuary is a key wintering and stop-over area for migratory shorebirds on the East Atlantic Flyway, supporting large numbers of these birds during the non-breeding season (Alves et al., 2012; Delany et al., 2009; Lourenço et al., 2018). Shorebirds feed on the benthic fauna present in intertidal mudflats, being their availability and quality essential to fuel their return migration to their breeding areas in spring (van de Kam et al., 2004). However, the increasing number of shellfishers operating in Tagus estuary will likely have consequences for the shorebird community via either direct (disturbance due to exclusion) or indirect effects (alteration of sediment composition and/or of the benthic species composition), which remain mostly unknown (but see Dias et al., 2006). 
+
+3- Main goal: 
+
+*Assess the environmental factors underlying macrobenthic intertidal community composition and compare these communities as well as shorebird assemblages (their main predators) between areas with different levels of shellfishing (as proxy of human disturbance), in the Tagus Estuary.*
+
+4 - Methods
+
+  4.1. *Evolution of shelfishers numbers over the last two decades*
+  
+  In order to understand the trend of the number of shellfishers in Tagus Estuary, we will make use of satellite imagery to count the number of boats using our study area. We will use only images that were associted to low tide (i.e., from -2 to +2 of low tide peak). We will use data from Portuguese Instituto Hidrográfico (IH, 2022) to calculate the tide height at the time that satellite images were sensed.
+  
+  4.2. *Benthos and sediment sampling*
+  
+  We will build upon a pilot study that allowed testing and fine tuning a new benthos and sediment sampling methodology: two corer samples of sediment will be extracted at each sampling point (Fig.1). The sample with benthos will be sievied using a 1 mm mesh and the sediment one will be stored to be processed later in the lab. We will use a systematic sampling, as we will sample in a regular grid (each square has 500*500m; Fig. 1).
+In the lab, one sample will be processed for biological content, with macrobenthos being identified to lowest taxon possible and measured using a magnifier and milimetric paper, respectively. The  sediment sample will be processed in order to determine the granulometry profile and organic matter content (Quintino et al., 1989), and thus to characterize the different habitats found.
+
+```{r, echo=FALSE, fig.align='left', out.width="100%"}
+knitr::include_graphics("C:/Users/joaof/OneDrive/Área de Trabalho/study_area.PNG")
+```
+Figure 1 - Tagus estuary. Eavh point represents a sampling location in the intertidal mudflats.
+
+
+  4.3. *Shorebirds and shellfishers counts*
+  
+  Shorebirds and shellfisher will be counted using a zoom-scope, at locations with varying levels of shellfishing activity to assess disturbance levels and composition of shorebirds assemblages (number of individuals of each species) in those areas. We will sample at least 30 squares per disturbance level (which will be obtained based on the data collected).Afterwards, we will use modal filters to extrapolate our results to the non-counted squares. 
+  
+
+  4.4. *Data analysis*
+  
+  To test which variables and how they affect benthos communities, we will use GAMs (Generalized additive models) as we expect that benthos communities will not have a monotonic response to environmental predictors (Granadeiro et al., 2004). Independent variables will be grain size and organic matter of the sediment, distance to the coast and distance to channels. Dependent variables will be benthos biomass and species richness. 
+  After this, we will test how human pressure may affect the same depedent variables. To accomplish this, we will group the benthos sampling according to the habitat (i.e., sediment features) and then compare areas with high and low human disturbance, using G-test, to understand the differences in benthos species and composition between areas.
+  Finally, to see how do shorebirds assemblages and numbers vary due to human disturbance and food availability, we will use GAMs, where the number of shellfishers and benthos abundance will be the independent variables and shorebirds assemblages and numbers will be the dependent variable.
+  
+
+5 - Current predictions
+
+(i) benthos’ communities will vary in relation to grain size and organic matter content.
+(ii) disturbed areas will have different macrobenthic species composition than undisturbed ones (number of individuals and size).
+(iii) shorebirds assemblages will vary due to disturbance by shellfishers and to differences in benthos communities.  
+
+
+
+6- Calendar
+
+```{r, echo=FALSE, fig.align='left', out.width="100%"}
+knitr::include_graphics("C:/Users/joaof/OneDrive/Área de Trabalho/calendar.PNG")
+```
+
+
+
+References
+
+Alves, J.A., Dias, M.P., Rocha, A., Barreto, B., Catry, T., Costa, H., Fernandes, P., Ginja, B., Katharine, G., Jara, J., Martins, R., Moniz, F., Pardal, S., Pereira, T., Rodrigues, J. and M. Rolo. 2012. Monitoring waterbird populations on the Tagus, Sado and Guadiana estuaries: 2010 report. Anuário Ornitológico 9: 66-87.
+
+Delany, S., Scott, D., Dodman, T. and D. Stroud. 2009. An atlas of wader populations in Africa and western Eurasia. Wetlands International, Wageningen, The Netherlands.
+
+Lourenço, P.M., Alonso, H., Alves, J. A., Carvalho, A. T., Catry, T., Costa, H., Costa, J. S., Dias, M. P., Encarnação, V., Martins, R. C., Moniz, F., Pardal, S., Rocha, A. and C.D. Santos. 2018. Monitoring waterbird populations in the Tejo estuary, Portugal: report for the decade 2007-2016. Airo 25: 3–31.
+
+van de Kam, J., Ens, B., Piersma, T. and L. Zwarts. 2004. Shorebirds: an illustrated behavioural ecology. KNNV Publishers, Utrecht, The Netherlands.
+
+Dias, M.P., Granadeiro, J. P., Lecoq, M., Santos, C. D. and J. M. Palmeirim. 2006. Distance to high-tide roosts constrains the use of foraging areas by dunlins: Implications for the management of estuarine wetlands. Biological Conservation 131: 446–452.
+
+Granadeiro, J. P., Andrade, J., & J. M. Palmeirim, 2004. Modelling the distribution of shorebirds in estuarine areas using generalised additive models. Journal of Sea Research 52: 227-240.
+
+Granadeiro, J. P., Santos, C. D., Dias, M. P., & J. M. Palmeirim, 2007. Environmental factors drive habitat partitioning in birds feeding in intertidal flats: implications for conservation. Hydrobiologia 587: 291-302.
